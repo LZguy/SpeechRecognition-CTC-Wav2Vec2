@@ -21,3 +21,79 @@ It includes two main tasks: implementing the CTC forward probability algorithm a
 ---
 
 ## 📂 Project Structure
+```
+DLSpeech_Ex5/
+├─ docs/
+│ ├─ DLSpeech_Ex5_046747.pdf # Original assignment instructions
+│ ├─ DLSpeech_Ex5_046747_updated.pdf # Updated instructions
+│ ├─ ex_5.pdf # Submitted report
+├─ data/
+│ ├─ train_transcription.txt # Training transcriptions
+│ ├─ lexicon.txt # Lexicon mapping for beam search
+│ ├─ mat1.npy # Probability matrix (used in Part 1)
+│ ├─ test/ # Test audio files (not included in repo)
+│ └─ train/ # Training audio files (not included in repo)
+├─ src/
+│ ├─ ex_5_part1.py # CTC forward algorithm
+│ ├─ ex_5_part2.py # Wav2Vec2 + KenLM ASR pipeline
+│ └─ kenlm.arpa # KenLM language model (large file)
+├─ results/
+│ └─ output.txt # Example output predictions
+├─ .gitignore
+├─ LICENSE
+└─ README.md
+```
+
+---
+
+## 📊 Data
+- `train/`, `test/` – speech audio data (WAV format).  
+  ⚠️ Due to file size, these are not stored in GitHub. Use [Git LFS](https://git-lfs.com/) or upload separately in a release.  
+- `train_transcription.txt` – contains the training transcriptions.  
+- `lexicon.txt` – defines the lexicon for beam search decoding.  
+- `mat1.npy` – NumPy array of probabilities for Part 1 (CTC).  
+
+---
+
+## 📜 Results
+- `output.txt` – Example system output, mapping spoken digits/letters into text.  
+- Evaluation included WER (Word Error Rate) and CER (Character Error Rate) using the **jiwer** library.  
+
+---
+
+## ⚙️ Requirements
+- Python 3.9+  
+- PyTorch + Torchaudio  
+- HuggingFace `transformers`  
+- `kenlm`  
+- `flashlight-text`  
+- `numpy`, `pandas`, `tqdm`, `jiwer`  
+
+Install dependencies:
+```bash
+pip install torch torchaudio transformers numpy pandas tqdm jiwer
+pip install https://github.com/kpu/kenlm/archive/master.zip
+pip install flashlight-text
+
+## ▶️ How to Run
+
+### Part 1 – CTC Forward Probability
+
+```bash
+python src/ex_5_part1.py data/mat1.npy "aaabb" "abc"
+```
+
+Outputs the forward probability of the sequence.
+
+---
+
+### Part 2 – ASR with Wav2Vec2 + KenLM
+
+1. Train / fine-tune Wav2Vec2 on the `train/` data.  
+
+2. Run decoding with beam search and KenLM:
+   ```bash
+   python src/ex_5_part2.py --data data/test --lexicon data/lexicon.txt --lm src/kenlm.arpa
+   ```
+
+3. Results are written to `results/output.txt`.
