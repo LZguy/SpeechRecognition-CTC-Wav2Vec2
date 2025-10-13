@@ -27,7 +27,7 @@ DLSpeech_Ex5/
 │ ├─ DLSpeech_Ex5_046747.pdf # Original assignment instructions
 │ ├─ DLSpeech_Ex5_046747_updated.pdf # Updated instructions
 │ ├─ ex_5.pdf # Submitted report
-├─ data/
+├─ data/ #most data is missing, will be delivered in the future
 │ ├─ train_transcription.txt # Training transcriptions
 │ ├─ lexicon.txt # Lexicon mapping for beam search
 │ ├─ mat1.npy # Probability matrix (used in Part 1)
