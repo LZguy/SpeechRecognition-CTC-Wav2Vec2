@@ -1,4 +1,4 @@
-# Deep Learning for Speech Signals – Exercise 5
+# SpeechRecognition-CTC-Wav2Vec2
 
 This project was completed as part of the **Deep Learning for Speech Signals** course (Technion, Spring 2025).  
 It includes two main tasks: implementing the CTC forward probability algorithm and building an ASR system with Wav2Vec2 and a KenLM language model.
