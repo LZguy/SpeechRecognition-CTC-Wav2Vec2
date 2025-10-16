@@ -51,8 +51,8 @@ DLSpeech_Ex5/
 Due to size, the full datasets are not stored directly in this repository.  
 They can be downloaded from Google Drive:
 
-- [train.zip](https://drive.google.com/file/d/1-nkIkgEyUWgIpYeoGAY-Ml2LoTnknTIN/view?usp=drivesdk)  
-- [test.zip](https://drive.google.com/file/d/1jNmYJoXHlCOTD5j5aXa9DpA7DTEflHbo/view?usp=drivesdk)  
+- [train.zip](https://drive.google.com/uc?id=1jNmYJoXHlCOTD5j5aXa9DpA7DTEflHbo)  
+- [test.zip](https://drive.google.com/uc?id=1-nkIkgEyUWgIpYeoGAY-Ml2LoTnknTIN)  
 
 Unzip them into the `data/` directory before running the code:
 ```
