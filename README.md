@@ -85,7 +85,7 @@ Install dependencies:
 pip install torch torchaudio transformers numpy pandas tqdm jiwer
 pip install https://github.com/kpu/kenlm/archive/master.zip
 pip install flashlight-text
-
+```
 ## ▶️ How to Run
 
 ### Part 1 – CTC Forward Probability
