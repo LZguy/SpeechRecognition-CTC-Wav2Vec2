@@ -56,7 +56,8 @@ They can be downloaded from Google Drive:
 
 Unzip them into the `data/` directory before running the code:
 ```
-unzip train.zip -d data/train unzip test.zip -d data/test
+unzip train.zip -d data/train
+unzip test.zip -d data/test
 ```
 Other resources stored in this repo:
 - `train_transcription.txt` – contains the training transcriptions.  
