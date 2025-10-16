@@ -205,3 +205,31 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ========================
+# Project-specific ignores
+# ========================
+
+# Audio datasets
+*.wav
+*.flac
+*.mp3
+
+# Large binary files
+*.npy
+*.npz
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.bz2
+*.arpa  # KenLM language models
+
+# Local dataset folders
+data/train/
+data/test/
+
+# Results (can be large, keep only examples)
+results/*.log
+results/*.txt
+!results/output.txt  # keep one sample output file
