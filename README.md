@@ -47,11 +47,21 @@ DLSpeech_Ex5/
 ---
 
 ## 📊 Data
-- `train/`, `test/` – speech audio data (WAV format).  
-  ⚠️ Due to file size, these are not stored in GitHub. Use [Git LFS](https://git-lfs.com/) or upload separately in a release.  
+
+Due to size, the full datasets are not stored directly in this repository.  
+They can be downloaded from Google Drive:
+
+- [train.zip](https://drive.google.com/file/d/1-nkIkgEyUWgIpYeoGAY-Ml2LoTnknTIN/view?usp=drivesdk)  
+- [test.zip](https://drive.google.com/file/d/1jNmYJoXHlCOTD5j5aXa9DpA7DTEflHbo/view?usp=drivesdk)  
+
+Unzip them into the `data/` directory before running the code:
+```
+unzip train.zip -d data/train unzip test.zip -d data/test
+```
+Other resources stored in this repo:
 - `train_transcription.txt` – contains the training transcriptions.  
 - `lexicon.txt` – defines the lexicon for beam search decoding.  
-- `mat1.npy` – NumPy array of probabilities for Part 1 (CTC).  
+- `mat1.npy` – NumPy array of probabilities for Part 1 (CTC).
 
 ---
 
